@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="300"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<button onclick="MyFunction()">Start</button>
+<script>
+function MyFunction() {
+  setInterval(move, 100);
+}
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "salmon";
+var n = 0;
+var i;
+function move(){  
+  for (i = 0; i < 10; i++) { 
+  ctx.fillRect(n,0,60,60);
+  n+=1;
+  ctx.clearRect(0, 0 , n, 60)
+  }
+}
+</script>
+
+</body>
+</html>
